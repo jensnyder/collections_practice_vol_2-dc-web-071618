@@ -32,8 +32,8 @@ def merge_data(keys, data)                  #keys is an array of 2 hashes, data 
   new_array = []
   keys.each do |person|                     #keys is an array, person is a hash
     person.each do |key, name|              #name is "blake" or "ashley"
-      stats = data[0][name]                 #data[0] is a hash, name is a key, value is a hash of stats
-      new_array << person.merge(stats)
+      stats = data[0][name]                 #data[0] is a hash: key is a name, value is a hash of stats
+      new_array << person.merge(stats)      #person and stats are both hashes, merge them, then add to new array
     end
   end
   new_array
